@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Method Beschrijving
 ---
 
 # Method Beschrijving
