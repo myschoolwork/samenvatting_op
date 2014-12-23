@@ -9,7 +9,7 @@ De blok commentaar boven een method die beschrijft hoe deze zal werken. De infor
 
 @post postcondities van de methode. Gebruik new. om aan te geven dat er gesproken wordt over de state **na** de beschrevn methode. Gebruik this. (mag ook weggelaten worden) om te spreken over de state **voor** de methode.
 
-@return de postconditie van een niet-basic inspector.
+@return de postconditie van een niet-basic inspector. bv `if (ditMagNiet == false) result == true;`
 
 @effect beschrijving van het effect van een mutator in functie van andere mutators. Ook constructors kunnen hun effect beschrijven aan de hand van andere constructoren met *this(. . .)* of *super(. . .)*. Het resultaat van **niet-basic** inspectors kan beschreven worden aan de hand van andere inspectors.
 

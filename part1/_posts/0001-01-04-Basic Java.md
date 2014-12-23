@@ -14,6 +14,4 @@ Statis variables: gedeeld door alle objecten van de zelfde class.
 
 Best practice: maak geen publieke variabelen, toon ze met een *getter* and maak het mogelijk ze te veranderen door een *setter*. Dit zorgt er voor dat je gemakkelijker later de achterliggende variabelen kan aanpassen als je dat wil: *better adaptable software*.
 
-Een setter is een mutator, een getter een inspector. Voor immutable variabelen (krijgen de qualificatie final) is er geen setter, deze worden één keer een waarde geven bij het maken van het object. 
-
-<!--more-->
+Een setter is een mutator, een getter een inspector. Voor immutable variabelen (krijgen de qualificatie final) is er geen setter, deze worden één keer een waarde geven bij het maken van het object.

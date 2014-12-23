@@ -11,9 +11,3 @@ Een *totale* constructor geeft altijd een goed geinitialiseerd object terug.
 Een mutator veranderd telkens de state en returned zonder side-effects.
 
 Een inspector geeft altijd een resultaat.
-
-<!--more-->
-
-## Meer info:
-
-. . .
