@@ -12,9 +12,9 @@ Een object kan `finalize()` op zichzelf aanroepen om te vragen op gekuist te wor
 
 ## Destructor
 
-Een destructor method krijgt de naam `terminate`, er mag **maximum** één zo'n methode per classe zijn. Een destructor mag exceptions smijten.
+Een destructor method krijgt de naam `terminate`, er mag **maximum** een (1) destructor per classe zijn. Een destructor mag exceptions smijten.
 
-Een classe kan ook één inspector implementeren `boolean isTerminated()`. Als het object geterminate is moet het echter nog steeds voldoen aan de classe invarianten, en die invarianten of de methodes moeten hier rekening mee houden. Mutators moeten er ook rekening mee houden dat een meegegeven object terminated kan zijn.
+Een classe kan ook een (1) inspector implementeren `boolean isTerminated()`. Als het object geterminate is moet het echter nog steeds voldoen aan de classe invarianten, en die invarianten of de methodes moeten hier rekening mee houden. Mutators moeten er ook rekening mee houden dat een meegegeven object terminated kan zijn.
 
 <!--more-->
 

@@ -4,11 +4,13 @@ layout: default
 
 # Class Diagrams
 
-![marriage](/part2/images/uml_marriage.png)
+![marriage]({{ site.github.url }}/part2/images/uml_marriage.png)
 
 Classen worden voorgesteld als rechthoeken met 3 onderdelen. Eerst de naam van de classe, dan de attributes (of properties) en als laatste de methods. Attributes krijgen een achterliggende variabele, met eventueel een getter en setter.
 
 Associaties worden aangegeven met een lijntje tussen classes. Er kan een bijhorende attribute aangegeven worden bij het lijntje (-spouse op de afbeelding), als ook een naam voor de associatie (marriage). Verder kan je de multipliciteit aangeven (bv 0..1, 0.., 1..).
+
+Belangrijk: Als je bi-directionele assiciaties hebt moeten mutators, destructors en constructors de classe invarianten respecteren in **beide** richtingen.
 
 <!--more-->
 
