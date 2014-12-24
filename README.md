@@ -10,7 +10,7 @@ Om dit lokaal te kunnen aanpassen heb je ruby en Jekyll nodig. Op mac/linux ken 
 # Stappenplan installatie -- windows
 
 ## Ruby in orde krijgen
-* installer ruby downloaden 
+* installer ruby downloaden
 * devkit downloaden : https://github.com/oneclick/rubyinstaller/wiki/Development-Kit (stappenplan volgen)
 * gem sources -a http://rubygems.org/ -> anders problemen bij gem install
 * om warnings weg te krijgen (optioneel): gem sources -r https://rubygems.org/
@@ -20,7 +20,7 @@ Om dit lokaal te kunnen aanpassen heb je ruby en Jekyll nodig. Op mac/linux ken 
 ## Repository
 * download sourcetree
 * voeg repository toe in sourcetree -> clone naar lokale map
-* pas _config.yml aan ("highlighter: false" -> moet er bij (zonder quotes) -> dit niet pushen!!
+* pas _config.yml aan ("highlighter: false" -> moet er bij (zonder quotes)) -> dit niet pushen!
 
 ## Runnen
 - Naar cmd met ruby (da is er bijgekomen nadat ge de rubyinstaller hebt gebruikt), dit commando uitvoeren: "jekyll serve"
