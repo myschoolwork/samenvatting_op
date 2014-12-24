@@ -28,7 +28,10 @@ public interface SomeInterface {
 Een classe kan zo veel interfaces implementeren als hij maar wil, op de zelfde manier als het overerven van een classe:
 
 {% highlight java %}
-public class MyClass extends OtherClass, AnInterface, AnotherInterface {...}
+public class MyClass
+    extends OtherClass
+    implements AnInterface, AnotherInterface
+{...}
 {% endhighlight %}
 
 Een interface kan andere interfaces implementeren.
