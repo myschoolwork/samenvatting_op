@@ -76,7 +76,7 @@ Als je een locale classe wilt maken, maar je wilt er maar één van, dan kan je 
 class EnclosingClass {
     public void g(int x, final int y) {
 
-        SomeInterface some = new SomeInterface { //of bv new SomeClass(arg1, arg2, ...)
+        SomeInterface some = new SomeInterface() { //of bv new SomeClass(arg1, arg2, ...)
             ...
         }
 
