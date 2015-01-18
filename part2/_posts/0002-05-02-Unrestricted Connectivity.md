@@ -6,7 +6,7 @@ layout: default
 
 ![banking]({{ site.github.url }}/part2/images/uml_banking.jpg)
 
-Om multiple-assiciation te hebben gebruiken we een lijst structuur. Met bijhorende `getXAt(i)`, `addAsXAt(i)`, `removeAsXAt(i)`. Alternatief kan je ook `addAsX(x)` en `removeAsX(x)` gebruiken als ze ongeordend zijn. Daar komen dan nog checkers bij `canHaveAsXAt(x,i)` of `canHaveAsX(x)`. En introduceer een class invariant `hasProperXs()` (meervoud).
+Om multiple-assiciation te hebben gebruiken we een lijst structuur. Met bijhorende `getXAt(i)`, `addAsXAt(x,i)`, `removeAsXAt(i)`. Alternatief kan je ook `addAsX(x)` en `removeAsX(x)` gebruiken als ze ongeordend zijn. Daar komen dan nog checkers bij `canHaveAsXAt(x,i)` of `canHaveAsX(x)`. En introduceer een class invariant `hasProperXs()` (meervoud).
 
 Om een of andere reden moet je dit 1-based doen, en niet 0-based. Dus als je de getter implementeerd doe je:
 
@@ -129,7 +129,7 @@ public class Share {
     *         not registered at another index than the given index.
     *       | else result ==
     *       |   for each I in 1..getNbPurchases():
-    |     (index == I) || (getPurchaseAt(I) != purchase)
+    *       |     (index == I) || (getPurchaseAt(I) != purchase)
     */
     @Raw
     public boolean canHaveAsPurchaseAt(Purchase purchase, int index) {

@@ -119,17 +119,17 @@ IllegalStateException {
     if (isTerminated())
     throw new IllegalStateException("Person already terminated!");
     Car result = null;
-    for (Ownable owning : ownings)
-    // At this point, we use the operator instanceof, which checks whether the
-    // object at its left-hand side belongs to the class at its right-hand side.
-    // The null reference does not belong to any class, and an object of a class
-    // is also an instance of its superclass.
-    if (owning instanceof Car) {
-        Car currentCar = (Car) owning;
-        if ((result == null)
-        || (result.getMotorVolume() < currentCar
-        .getMotorVolume()))
-        result = currentCar;
+    for (Ownable owning : ownings) {
+        // At this point, we use the operator instanceof, which checks whether the
+        // object at its left-hand side belongs to the class at its right-hand side.
+        // The null reference does not belong to any class, and an object of a class
+        // is also an instance of its superclass.
+        if (owning instanceof Car) {
+            Car currentCar = (Car) owning;
+            if ((result == null)
+                || (result.getMotorVolume() < currentCar.getMotorVolume()))
+                result = currentCar;
+        }
     }
     if (result == null)
     throw new NoSuchElementException("Person without cars!");

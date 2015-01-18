@@ -4,7 +4,7 @@ layout: default
 
 # Nominal Programming
 
-Gebruik classe invarianten en pre-condities. Worden aangegeven in de heading van een classe.
+Gebruik classe invarianten (worden aangegeven in de heading van een classe) en pre-condities.
 
 Classe invarianten leggen restricties op de state van het object op en worden aangeven met @invar. Het zijn voorwaarden waar het object **altijd** aan moet voldoen. Methodes die het object in een inconsistente state brengen worden aangeduid met @Raw en deze moeten dus geen rekeningen houden met de classe invarianten. Worden zowel formeel (logica) als informeel beschreven bovenaan in de classe.
 
@@ -20,7 +20,7 @@ Gebruikers moeten verzekeren dat objecten doorgegeven aan een methode voldoen aa
 
 De programmeur moet verzekeren dat objecten in een juiste state zijn na het uitvoeren van een methode, dat ze voldoen aan hun classe invarianten. Ook alle post-condities moeten voldaan zijn na een methode.
 
-De programmeur van bij het implementeren van een methode er van uit gaan dat de precondities en classe invarianten voldaan zijn.
+De programmeur kan bij het implementeren van een methode er van uit gaan dat de precondities en classe invarianten voldaan zijn.
 
 ## Voorbeeldje van invarianten uit de les:
 
