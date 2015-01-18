@@ -6,6 +6,8 @@ Sinds Java8 kunnen er ook default functie implementaties in interfaces gegeven w
 
 {% highlight java %}
 public interface SomeInterface {
+    public static final int constante;
+
     public abstract int abstractMethod(Object o);
 
     //sinds Java 8
@@ -25,7 +27,7 @@ public interface SomeInterface {
 }
 {% endhighlight %}
 
-Een classe kan zo veel interfaces implementeren als hij maar wil, op de zelfde manier als het overerven van een classe:
+Een classe kan zo veel interfaces implementeren als hij maar wil, op bijna de zelfde manier als het overerven van een classe:
 
 {% highlight java %}
 public class MyClass
@@ -34,6 +36,65 @@ public class MyClass
 {...}
 {% endhighlight %}
 
-Een interface kan andere interfaces implementeren.
+Een interface kan andere interfaces implementeren. De SubInterface kan bestaande methods dan een `default` implementatie geven, ze worden dan ook geannoteerd met `@Override`. Ze subinterface kan ook `default` methods on-implementeren. (Zie 'meer' voor voorbeeld.)
 
 Als een classe meerdere interfaces inplementeerd, die elks een functie met de zelfde signatuur hebben, dan worden deze functies samen één functie.
+
+<!--more-->
+
+## (On)Implementeren van default methods
+
+{% highlight java %}
+public interface SubInterface extends SomeInterface {
+    @Override
+    // Implementation of inherited abstract method.
+    public default int abstractMethod(Object o) {
+        return -1;
+    }
+
+    // Un-implementation of inherited default method.
+    @Override public boolean defaultMethod(Object o);
+
+    // Invocation of super-version.
+    @Override public default void defaultMethod2() {
+        SomeInterface.super.defaultMethod2();
+    }
+}
+{% endhighlight %}
+
+## Meerdere interfaces implementeren met de zelfde method
+
+{% highlight java %}
+public interface I1 {
+    public abstract int abstractMethod(Object o);
+
+    public default boolean defaultMethod(Object o)
+    {
+        return true ;
+    }
+}
+
+public interface I2 {
+    public default int abstractMethod(Object o)
+    {
+        return -1;
+    }
+
+    public abstract boolean defaultMethod(Object o);
+}
+
+public interface I12
+    extends I1, I2
+{
+    // methods worden samengevoegd
+
+    @Override
+    public abstract int abstractMethod(Object o);
+
+    @Override
+    public default boolean defaultMethod(Object o)
+    {
+        return false;
+    }
+}
+{% endhighlight %}
