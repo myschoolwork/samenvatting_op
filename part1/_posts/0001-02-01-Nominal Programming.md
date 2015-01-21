@@ -6,7 +6,7 @@ layout: default
 
 Gebruik classe invarianten (worden aangegeven in de heading van een classe) en pre-condities.
 
-Classe invarianten leggen restricties op de state van het object op en worden aangeven met @invar. Het zijn voorwaarden waar het object **altijd** aan moet voldoen. Methodes die het object in een inconsistente state brengen worden aangeduid met @Raw en deze moeten dus geen rekeningen houden met de classe invarianten. Worden zowel formeel (logica) als informeel beschreven bovenaan in de classe.
+Classe invarianten leggen restricties op de state van het object op en worden aangeven met @invar. Het zijn voorwaarden waar het object **altijd** aan moet voldoen. Methodes die het object in een inconsistente state brengen, of die toch gebruikt mogen worden wanneer het object in een inconsistente state is, worden aangeduid met @Raw en deze moeten dus geen rekeningen houden met de classe invarianten. Worden zowel formeel (logica) als informeel beschreven bovenaan in de classe.
 
 Precondities worden op de zelfde manier gebruikt als postcondities. Ze worden aangeven met @pre.
 
