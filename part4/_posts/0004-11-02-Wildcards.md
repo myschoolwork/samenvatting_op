@@ -4,7 +4,7 @@ layout: default
 
 # Wildcards
 
-Een wildcard wordt geschreven als `?`. Zo is List<?> supertype van alle instantiaties van List. Als je een `List<? > myList` hebt, dan is het volgende perfect mogelijk: `myList.add(new Integer())`, or worden geen types nagekeken. Zo kan ook `Object o = myList.get(0)` gebruikt worden.
+Een wildcard wordt geschreven als `?`. Zo is List<?> supertype van alle instantiaties van List. `List<? > myList` kan je zien als een lijst waar eender wat in kan zitten, zo kan je dus doen `myLyst = new ArrayList<Integer>();` want myList kan bijvoorbeeld een lijst van Integers zijn. Daarintegen is het volgende **NIET** mogelijk: `myList.add(new Integer())`, want myList kan eender wat bevatten, de compiler kan onmogelijk weten of dat nu wel Integers gaan zijn of niet. `Object o = myList.get(0)` kan dan weer wel, want alles erft over van Object, dus eender wat er in zit kan opgeslagen worden in een variabele met type Object. `Integer i = myList.get(0)` kan niet want wie weet zit er iets anders dan Integers (of iets dat van Integer overerft) in.
 
 ## Upperbound
 
