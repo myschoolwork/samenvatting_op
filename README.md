@@ -3,28 +3,18 @@ Samenvatting Objectgericht Programeren
 
 Samenvatting cursus Objectgericht Programmeren uit Leuven
 
-# Install
+# Install Jekyll/Github pages
 
-Om dit lokaal te kunnen aanpassen heb je ruby en Jekyll nodig. Op mac/linux ken je eenvoudig [dit](https://github.com/github/pages-gem) gebruiken. Op windows kan je [deze tutorial](http://bradleygrainger.com/2011/09/07/how-to-use-github-pages-on-windows.html) proberen, maar je kan beter rechtstreeks `gem install github-pages` gebruiken in stap 3 ipv `jekyll` (de github-pages gem bevat Jekyll).
+Om dit lokaal te kunnen aanpassen heb je Ruby en Jekyll nodig.
 
-# Stappenplan installatie -- windows
+## Mac / Linux
 
-## Ruby in orde krijgen
-* installer ruby downloaden
-* devkit downloaden : https://github.com/oneclick/rubyinstaller/wiki/Development-Kit (stappenplan volgen)
-* gem sources -a http://rubygems.org/ -> anders problemen bij gem install
-* om warnings weg te krijgen (optioneel): gem sources -r https://rubygems.org/
-* gem install rouge
-* gem install wdm
+Op mac/linux kan je gewoon [dit](https://github.com/github/pages-gem) gebruiken.
 
-## Repository
-* download sourcetree
-* voeg repository toe in sourcetree -> clone naar lokale map
-* pas _config.yml aan ("highlighter: false" -> moet er bij (zonder quotes)) -> dit niet pushen!
+## Windows
 
-## Runnen
-- Naar cmd met ruby (da is er bijgekomen nadat ge de rubyinstaller hebt gebruikt), dit commando uitvoeren: "jekyll serve"
-- localhost:4000 en het zou normaal moeten lukken
+Op windows is het iets ingewikkelder. Ik heb het aan de praat gekregen met volgende stappen:
 
-## Problemen
-- ask via facebookgroep!
+* Install Ruby met deze tutorial, maar negeer het gedeelte rond Jekyll (we gebruiken de github pages gem, die is vollediger): http://jekyll-windows.juthilo.com/1-ruby-and-devkit/
+* Update je Ruby Gem door de 3 punten op deze pagina te volgen: https://rubygems.org/pages/download#formats
+* Installeer de [Github Pages gem](https://github.com/github/pages-gem) met: `gem install github-pages`
